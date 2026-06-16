@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Infinity Solutions LLC — AI Tools for Real People</title>
-<meta name="description" content="Affordable AI-powered tools for legal documents, wellness, education, and small business. Built for real people, not corporations.">
+<meta name="description" content="Affordable AI-powered tools for legal documents, wellness, education, and small business — plus local-first desktop apps that replace expensive subscriptions with a single purchase.">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -15,7 +15,7 @@
   --text:#f0f2f8;--muted:#7a8099;--muted2:#a0a8c0;
   --accent:#4f8eff;--accent2:#7eb0ff;
   --gold:#f0b429;--teal:#2dd4bf;--purple:#a78bfa;--green:#34d399;
-  --orange:#f97316;--orange2:#fb923c;
+  --cyan:#00c8f0;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
@@ -43,7 +43,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;line-height:1.06;letter-spacing:-.03em;max-width:880px;margin-bottom:1.5rem;animation:up .7s .08s ease both}
 h1 .ac{color:var(--accent)}
 h1 .soft{color:var(--muted);font-weight:400;font-style:italic;font-family:'Instrument Sans',sans-serif;font-size:72%}
-.hero-sub{font-size:1.05rem;color:var(--muted2);max-width:520px;line-height:1.75;font-weight:300;margin-bottom:2.4rem;animation:up .7s .16s ease both}
+.hero-sub{font-size:1.05rem;color:var(--muted2);max-width:560px;line-height:1.75;font-weight:300;margin-bottom:2.4rem;animation:up .7s .16s ease both}
 .hero-sub strong{color:var(--text);font-weight:500}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;animation:up .7s .24s ease both}
 .btn{font-family:'Syne',sans-serif;font-weight:700;font-size:.92rem;padding:.85rem 1.9rem;border-radius:100px;text-decoration:none;border:none;cursor:pointer;transition:all .2s;display:inline-block}
@@ -65,27 +65,29 @@ h1 .soft{color:var(--muted);font-weight:400;font-style:italic;font-family:'Instr
 .mission p+p{margin-top:.9rem}
 .mission p strong{color:var(--text);font-weight:500}
 
-/* INFINITYMATCH FEATURE */
-.im-feature{padding:6rem 2rem;max-width:1080px;margin:0 auto}
-.im-card{background:var(--bg2);border:1px solid rgba(249,115,22,.2);border-radius:24px;padding:3rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;overflow:hidden}
-.im-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--orange2))}
-.im-glow{position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(ellipse,rgba(249,115,22,.07) 0%,transparent 65%);pointer-events:none}
-.im-eyebrow{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:.7rem;display:flex;align-items:center;gap:.4rem}
-.im-new{background:rgba(249,115,22,.15);border:1px solid rgba(249,115,22,.3);border-radius:100px;padding:.15rem .6rem;font-size:.6rem;color:var(--orange2)}
-.im-card h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin-bottom:.8rem}
-.im-card h2 em{color:var(--orange);font-style:normal}
-.im-card p{font-size:.92rem;color:var(--muted2);line-height:1.75;font-weight:300;margin-bottom:1.5rem}
-.im-btns{display:flex;gap:8px;flex-wrap:wrap}
-.btn-orange{background:var(--orange);color:#fff}
-.btn-orange:hover{background:var(--orange2);transform:translateY(-1px);box-shadow:0 8px 24px rgba(249,115,22,.25)}
-.btn-orange-ghost{background:transparent;border:1px solid rgba(249,115,22,.3);color:var(--orange2)}
-.btn-orange-ghost:hover{background:rgba(249,115,22,.08)}
-.im-stats{display:flex;flex-direction:column;gap:12px}
-.im-stat{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:1.1rem 1.3rem}
-.im-stat-num{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--orange);margin-bottom:.15rem}
-.im-stat-label{font-size:.72rem;color:var(--muted2)}
-.im-badge-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
-.im-badge{background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.18);border-radius:100px;padding:.22rem .75rem;font-size:.7rem;color:var(--orange2)}
+/* DESKTOP APPS */
+.apps-section{padding:5rem 2rem 4rem;max-width:1080px;margin:0 auto}
+.apps-header{text-align:center;margin-bottom:2.8rem}
+.apps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.app-card{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:2rem;position:relative;overflow:hidden;display:flex;flex-direction:column;transition:all .22s}
+.app-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ac,var(--accent))}
+.app-card:hover{border-color:var(--border2);transform:translateY(-4px);background:var(--bg3)}
+.app-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.2rem;background:var(--ai,rgba(79,142,255,.1))}
+.app-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.35rem}
+.app-name{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800}
+.app-chip{font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .55rem;border-radius:100px;flex-shrink:0;margin-top:2px}
+.chip-live{background:rgba(52,211,153,.13);color:var(--green);border:1px solid rgba(52,211,153,.3)}
+.chip-beta{background:rgba(240,180,41,.1);color:var(--gold);border:1px solid rgba(240,180,41,.3)}
+.app-platform{display:inline-flex;align-items:center;gap:.3rem;font-size:.65rem;font-weight:600;letter-spacing:.06em;color:var(--muted2);border:1px solid var(--border);border-radius:4px;padding:.15rem .5rem;margin-bottom:.9rem}
+.app-desc{font-size:.88rem;color:var(--muted2);line-height:1.65;font-weight:300;margin-bottom:1.2rem}
+.app-features{list-style:none;display:flex;flex-direction:column;gap:.48rem;flex:1;margin-bottom:1.5rem}
+.app-features li{font-size:.8rem;color:var(--muted2);display:flex;align-items:flex-start;gap:.45rem;line-height:1.45}
+.app-features li::before{content:'✓';color:var(--ac,var(--accent));font-weight:700;flex-shrink:0;margin-top:1px;font-size:.78rem}
+.app-foot{border-top:1px solid var(--border);padding-top:1rem;margin-top:auto;display:flex;align-items:center;justify-content:space-between}
+.app-price{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800}
+.app-price small{font-size:.7rem;font-weight:400;color:var(--muted);font-family:'Instrument Sans',sans-serif;display:block;margin-top:1px}
+.app-cta{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;padding:.42rem .95rem;border-radius:100px;text-decoration:none;letter-spacing:.04em;white-space:nowrap;transition:all .18s;background:var(--ac,var(--accent));color:#04060d}
+.app-cta:hover{opacity:.85;transform:translateY(-1px)}
 
 /* PRODUCTS */
 .products{padding:4rem 2rem 6rem;max-width:1080px;margin:0 auto}
@@ -102,7 +104,6 @@ h1 .soft{color:var(--muted);font-weight:400;font-style:italic;font-family:'Instr
 .pcard-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:.35rem}
 .pcard-name{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700}
 .chip{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:100px}
-.chip-live{background:rgba(52,211,153,.13);color:var(--green);border:1px solid rgba(52,211,153,.3)}
 .pcard-desc{font-size:.84rem;color:var(--muted2);line-height:1.65;font-weight:300;flex:1;margin-bottom:1rem}
 .pcard-foot{display:flex;align-items:center;justify-content:space-between;padding-top:.85rem;border-top:1px solid var(--border)}
 .pcard-price{font-family:'Syne',sans-serif;font-size:.9rem;font-weight:700}
@@ -139,14 +140,14 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 2.5
 .copy{font-size:.73rem;color:var(--muted)}
 
 @media(max-width:860px){
-  .im-card{grid-template-columns:1fr}
-  .im-glow{display:none}
+  .apps-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:680px){
   nav{padding:1rem 1.2rem}
   .nav-links{display:none}
   .why-inner{grid-template-columns:1fr;gap:2.5rem}
   .stats{gap:1.5rem}
+  .apps-grid{grid-template-columns:1fr}
   footer{flex-direction:column;text-align:center}
   .footer-links{justify-content:center}
 }
@@ -157,7 +158,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 2.5
 <nav>
   <a href="https://infinityhub.dev" class="logo">Infinity<em>.</em>Solutions</a>
   <ul class="nav-links">
-    <li><a href="#infinitymatch">InfinityMatch</a></li>
+    <li><a href="#apps">Desktop Apps</a></li>
     <li><a href="#products">AI Tools</a></li>
     <li><a href="#mission">Mission</a></li>
     <li><a href="https://contact.infinityhub.dev">Contact</a></li>
@@ -172,10 +173,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 2.5
   <div class="hero-glow"></div>
   <div class="badge"><span class="badge-dot"></span> AI-powered · Affordable · Built for real people</div>
   <h1>Tools that work<br><span class="ac">for everyone.</span><br><span class="soft">not just those who can afford them.</span></h1>
-  <p class="hero-sub">Infinity Solutions LLC builds <strong>AI-powered apps</strong> that give ordinary people access to the same quality tools that used to cost thousands — legal, wellness, education, business, and a contractor marketplace that actually works.</p>
+  <p class="hero-sub">Infinity Solutions LLC builds <strong>AI-powered tools</strong> that give ordinary people access to what used to cost thousands. Web apps for legal, wellness, and business — plus <strong>local desktop apps</strong> that replace expensive subscriptions with a single purchase. Your data stays yours.</p>
   <div class="hero-actions">
-    <a href="#products" class="btn btn-solid">Explore AI Tools</a>
-    <a href="#infinitymatch" class="btn btn-outline">InfinityMatch Platform</a>
+    <a href="#apps" class="btn btn-solid">See Desktop Apps</a>
+    <a href="#products" class="btn btn-outline">Explore AI Tools</a>
   </div>
   <div class="stats">
     <div><div class="stat-num">97<em>%</em></div><div class="stat-lbl">Cheaper than lawyers</div></div>
@@ -195,37 +196,64 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 2.5
   </div>
 </section>
 
-<!-- INFINITYMATCH -->
-<section class="im-feature" id="infinitymatch">
-  <div style="text-align:center;margin-bottom:2rem">
-    <div class="eyebrow" style="color:var(--orange)">New platform</div>
-    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;letter-spacing:-.02em">InfinityMatch — The Contractor Platform</h2>
+<!-- DESKTOP APPS -->
+<section id="apps">
+<div class="apps-section">
+  <div class="apps-header">
+    <div class="eyebrow">Desktop Software</div>
+    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.7rem);font-weight:800;letter-spacing:-.025em;margin-bottom:.5rem">Local-first. No subscriptions. Yours forever.</h2>
+    <p style="color:var(--muted2);font-size:.98rem;font-weight:300;max-width:520px;margin:0 auto">Windows apps that run entirely on your PC — no cloud, no upload, no account required. Pay once and own it.</p>
   </div>
-  <div class="im-card">
-    <div class="im-glow"></div>
-    <div>
-      <div class="im-eyebrow">🔨 InfinityMatch <span class="im-new">NEW</span></div>
-      <h2>Real projects.<br><em>No fake leads.</em></h2>
-      <p>A contractor marketplace built by a contractor who got burned by HomeAdvisor. One flat subscription for contractors — $49/month. Exclusively yours, one project at a time. Free for homeowners, always.</p>
-      <div class="im-btns">
-        <a href="https://contactinfinitysolutionsllc-ops.github.io/infinitymatch/" class="btn btn-orange">Post a project — free →</a>
-        <a href="https://contactinfinitysolutionsllc-ops.github.io/contractor/" class="btn btn-orange-ghost">Join as a contractor</a>
+
+  <div class="apps-grid">
+
+    <!-- InfinityGuard -->
+    <div class="app-card" style="--ac:#00c8f0;--ai:rgba(0,200,240,.1)">
+      <div class="app-icon">🛡️</div>
+      <div class="app-head">
+        <div class="app-name">InfinityGuard</div>
+        <span class="app-chip chip-live">Live</span>
       </div>
-      <div class="im-badge-row">
-        <span class="im-badge">✓ Verified contractors only</span>
-        <span class="im-badge">✓ No per-lead charges</span>
-        <span class="im-badge">✓ AI lead scoring</span>
-        <span class="im-badge">✓ Exclusive matching</span>
-        <span class="im-badge">✓ AI-generated contracts</span>
+      <div class="app-platform">Windows 10 / 11</div>
+      <div class="app-desc">A full antivirus and privacy suite that runs 100% on your PC. Real-time protection, AI threat detection, DNS Shield, VPN support, and more — no cloud, no telemetry, no monthly bill required.</div>
+      <div class="app-foot" style="margin-top:auto">
+        <div class="app-price">Free to start<small>Paid plans from $4.99/mo</small></div>
+        <a href="https://infinityguard.infinityhub.dev/" class="app-cta">Learn More →</a>
       </div>
     </div>
-    <div class="im-stats">
-      <div class="im-stat"><div class="im-stat-num">$0</div><div class="im-stat-label">Cost for homeowners — always free to post</div></div>
-      <div class="im-stat"><div class="im-stat-num">$49<span style="font-size:.9rem;font-weight:400;color:var(--muted2)">/mo</span></div><div class="im-stat-label">Flat contractor subscription — no per-lead fees</div></div>
-      <div class="im-stat"><div class="im-stat-num">2hr</div><div class="im-stat-label">Exclusive response window — or it moves to the next contractor</div></div>
-      <div class="im-stat"><div class="im-stat-num">0</div><div class="im-stat-label">Fake leads — AI scores every submission before routing</div></div>
+
+    <!-- CleanWave -->
+    <div class="app-card" style="--ac:#a78bfa;--ai:rgba(167,139,250,.1)">
+      <div class="app-icon">🎵</div>
+      <div class="app-head">
+        <div class="app-name">CleanWave</div>
+        <span class="app-chip chip-live">Live</span>
+      </div>
+      <div class="app-platform">Windows 10 / 11</div>
+      <div class="app-desc">Local AI music tools — clean AI-generated tracks, separate stems, and produce music entirely on your own hardware. No subscription, no upload, no ongoing cost. Pay once, own it forever.</div>
+      <div class="app-foot" style="margin-top:auto">
+        <div class="app-price">From $14.99<small>One-time purchase</small></div>
+        <a href="https://cleanwave.infinityhub.dev/" class="app-cta">Learn More →</a>
+      </div>
     </div>
+
+    <!-- CaptionCraft -->
+    <div class="app-card" style="--ac:#2dd4bf;--ai:rgba(45,212,191,.1)">
+      <div class="app-icon">📝</div>
+      <div class="app-head">
+        <div class="app-name">CaptionCraft</div>
+        <span class="app-chip chip-beta">Beta</span>
+      </div>
+      <div class="app-platform">Windows 10 / 11</div>
+      <div class="app-desc">Local AI subtitle generation powered by Whisper. Drop a video, get accurate captions in 99 languages — burned in or exported as SRT/VTT. No upload, no account, no per-minute fees.</div>
+      <div class="app-foot" style="margin-top:auto">
+        <div class="app-price">From $49<small>One-time purchase</small></div>
+        <a href="https://captioncraft.infinityhub.dev/" class="app-cta">Learn More →</a>
+      </div>
+    </div>
+
   </div>
+</div>
 </section>
 
 <!-- AI TOOLS -->
@@ -369,8 +397,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 2.5
     <div class="pillars">
       <div class="pillar"><div class="pillar-icon" style="background:rgba(79,142,255,.12)">💸</div><div><div class="p-title">Radical affordability</div><div class="p-desc">We price to be accessible, not to maximize margins. If you can't afford it, it doesn't work.</div></div></div>
       <div class="pillar"><div class="pillar-icon" style="background:rgba(52,211,153,.1)">🧠</div><div><div class="p-title">AI that actually helps</div><div class="p-desc">Powered by Claude — not cheap cut-rate models that hallucinate and embarrass you.</div></div></div>
-      <div class="pillar"><div class="pillar-icon" style="background:rgba(240,180,41,.1)">🔒</div><div><div class="p-title">No corporate nonsense</div><div class="p-desc">No VC pressure. No dark patterns. No dumbing down. Just tools that work.</div></div></div>
-      <div class="pillar"><div class="pillar-icon" style="background:rgba(167,139,250,.1)">♾️</div><div><div class="p-title">Built to grow with you</div><div class="p-desc">Start free or cheap. Upgrade when it makes sense. Every product scales to your needs.</div></div></div>
+      <div class="pillar"><div class="pillar-icon" style="background:rgba(0,200,240,.1)">🔒</div><div><div class="p-title">Your data stays local</div><div class="p-desc">Desktop apps run entirely on your PC. No upload. No account. No surveillance.</div></div></div>
+      <div class="pillar"><div class="pillar-icon" style="background:rgba(167,139,250,.1)">♾️</div><div><div class="p-title">No corporate nonsense</div><div class="p-desc">No VC pressure. No dark patterns. No subscriptions where one-time makes more sense.</div></div></div>
     </div>
   </div>
 </section>
@@ -378,11 +406,11 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 2.5
 <!-- CTA -->
 <section class="cta">
   <div class="eyebrow">Get started</div>
-  <h2>Your first document is waiting.</h2>
-  <p>Try any tool right now — most have free uses to start. Pay only for what you need, get it in 60 seconds.</p>
+  <h2>Protected. Creative. Legal. Ready.</h2>
+  <p>Try InfinityGuard free, generate your first legal document, or grab CleanWave and start making music — all without giving us your credit card.</p>
   <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-    <a href="https://contactinfinitysolutionsllc-ops.github.io/justdocs/" class="btn btn-solid">Try JustDocs free →</a>
-    <a href="#products" class="btn btn-outline">See all tools</a>
+    <a href="https://infinityguard.infinityhub.dev/" class="btn btn-solid">Download InfinityGuard →</a>
+    <a href="#products" class="btn btn-outline">See all AI tools</a>
   </div>
 </section>
 
@@ -390,8 +418,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 2.5
 <footer>
   <a href="https://infinityhub.dev" class="footer-logo">Infinity<em>.</em>Solutions <span style="color:var(--muted);font-weight:400;font-family:'Instrument Sans',sans-serif;font-size:.85rem">LLC</span></a>
   <ul class="footer-links">
+    <li><a href="#apps">Desktop Apps</a></li>
     <li><a href="#products">AI Tools</a></li>
-    <li><a href="#infinitymatch">InfinityMatch</a></li>
     <li><a href="#mission">Mission</a></li>
     <li><a href="https://contact.infinityhub.dev">Contact &amp; Support</a></li>
     <li><a href="https://contactinfinitysolutionsllc-ops.github.io/account/">My Account</a></li>
